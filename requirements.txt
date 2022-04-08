@@ -1,0 +1,7 @@
+pymongo[srv]
+pandas
+python-dotenv
+fastapi
+uvicorn[standard]
+gunicorn
+altair
