@@ -15,11 +15,9 @@ class MongoDB:
     def connect(self):
         return MongoClient(self.url)[self.database][self.collection]
 
-    def dataframe(self,
-                  query: Optional[Dict] = None,
-                  projection: Optional[Dict] = None):
+    def dataframe(self, query: Optional[Dict] = None):
         return DataFrame(self.connect().find(
             filter=query,
-            projection=projection,
+            projection={"_id": False},
             limit=1000,
         ))

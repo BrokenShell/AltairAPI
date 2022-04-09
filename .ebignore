@@ -1,0 +1,5 @@
+.env
+venv/
+graphs.ipynb
+README.md
+run.sh
