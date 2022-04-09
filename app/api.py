@@ -26,7 +26,7 @@ API.add_middleware(
 @API.post("/graph")
 async def graph(body: Selections):
     return json.loads(make_vis(
-        df=API.mongo.dataframe(body.query, {"_id": False}),
+        df=API.mongo.dataframe(body.query),
         x_axis=body.x_axis,
         y_axis=body.y_axis,
         target=body.target,
