@@ -19,5 +19,5 @@ class MongoDB:
         return DataFrame(self.connect().find(
             filter=query,
             projection={"_id": False},
-            limit=1000,
+            limit=5000,
         ))
