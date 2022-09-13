@@ -52,6 +52,7 @@ class Altair:
             x=alt.X(x, title=x.title()),
             y=alt.Y("count()", title="Count"),
             color=alt.Color(target, title=target.title()),
+            tooltip=alt.Tooltip(list(df.columns)),
         ).properties(**self.properties).configure(**self.configuration)
 
     def pie_chart(self, df: DataFrame, target: str):
@@ -59,4 +60,5 @@ class Altair:
         return alt.Chart(df, title=title).mark_arc(innerRadius=80).encode(
             color=alt.Color(target, title=target.title()),
             theta=alt.Theta("count()", title="Count"),
+            tooltip=alt.Tooltip(list(df.columns)),
         ).properties(**self.properties).configure(**self.configuration)
