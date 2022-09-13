@@ -9,7 +9,7 @@ from app.types import Pie, Bar, Scatter
 
 API = FastAPI(
     title="Data Science Visualization API",
-    version="0.2.1",
+    version="1.2.1",
     docs_url="/",
     description="<h2>Altair Graphs</h2>",
 )
