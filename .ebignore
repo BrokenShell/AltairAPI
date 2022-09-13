@@ -1,5 +1,5 @@
 .env
-venv/
-graphs.ipynb
+venv
+notebooks
 README.md
 run.sh
