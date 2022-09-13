@@ -17,7 +17,7 @@ API.mongo = MongoDB()
 API.graphs = Altair()
 API.add_middleware(
     CORSMiddleware,
-    allow_origins=["visfromapi-dev.us-east-1.elasticbeanstalk.com"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
